@@ -1,1 +1,4 @@
-/*so I know I want those cool icons, but I can't quite figure out how to get them. I'll look at this a little more later. */
+/*Okay. Now I'm in here trying to figure out the icomoon font thing. We'll see.*/
+@@font-face {
+  font-family: 'icomoon'; /*So far so good. Now I have to read the docs*/
+}
