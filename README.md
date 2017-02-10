@@ -1,6 +1,10 @@
 # portfolio
 What I've been up to lately: A collection of projects, fascinations, obsessions, and rabbit holes.
 
+Favicon made by Bogdan Rosu from www.flaticon.com (In the final product, attribution must be viewer-facing. Perhaps on the about page?)
+
+Background image by Terry Brainard. (Put this in the same place as the icon attribution.)
+
 
 
 User Stories: MVP

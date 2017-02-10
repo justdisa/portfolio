@@ -1,0 +1,21 @@
+/*stuff for all pages*/
+
+body {
+  background-color: darkslateblue;
+  background-image: url("https://scontent.xx.fbcdn.net/v/t31.0-8/12022591_10206515275497253_1676895740994175416_o.jpg?oh=6de1dfe2f0a871f004a23f548ccd2a50&oe=590091C0");
+  background-size: 100%;
+  color: whitesmoke;
+  font-family: aphont;
+}
+
+section, div, nav, p {
+  }
+
+.main {
+  background-color: black;
+  opacity: .7;
+  width: 85%;
+  height: 30%;
+  padding: 5%;
+  margin:auto;
+}
