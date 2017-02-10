@@ -11,6 +11,13 @@ body {
 section, div, nav, p {
   }
 
+h1 {
+  }
+  
+h2 {
+  font-size: 1em;
+}
+
 .main {
   background-color: black;
   opacity: .7;
