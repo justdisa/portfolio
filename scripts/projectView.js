@@ -65,3 +65,44 @@ projectView.setTeasers = function() {
   $(this).hide();
 });
 };
+
+projectView.initNewProjectPage = function() {
+$('.tab-content').show();
+$('#export-field').hide();
+  $('#project-json').on('focus', function(){
+    this.select();
+  });
+  $('#new-form').on('change', projectView.create);
+};
+
+projectView.create = function() {
+  var project;
+  $("#project-preview").empty();
+
+  project = newProject({
+    name: $("#project-name").val(),
+    collaborator: $("#project-collaborator").val(),
+    version: $("#project-version").val(),
+    webaddress: $("#project-webaddress").val(),
+    category: $("#project-category").val(),
+    body: $("#project-body").val(), //remember to check to see if you've left any body named description.
+    publishedOn: $("#project-published:checked").length ? new Date() : null
+});
+
+$('#project-preview').append(project.toHtml());
+
+$('pre code').each(function(i, block) {
+   hljs.highlightBlock(block);
+ });
+
+ $('#export-field').show();
+$('#project-json').val(JSON.stringify(project) + ',');
+};
+
+projectView.initIndexPage = function() {
+  projectView.populateFilters();
+  projectView.handleCategoryFilter();
+  projectView.handleCollaboratorFilter();
+  projectView.handleMainNav();
+  projectView.setTeasers();
+};

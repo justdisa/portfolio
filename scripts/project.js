@@ -8,7 +8,7 @@ function Project (opts) {
   this.version = opts.version;
   this.webaddress = opts.webaddress;
   this.category = opts.category;
-  this.description = opts.description;
+  this.body = opts.body;
   this.publishedOn = opts.publishedOn; //changed to be consistent with labs//
 }
 
