@@ -16,14 +16,14 @@
 <!-- not entirely sure I understand this piece -->
     <link rel="stylesheet" href="vendor/styles/railscasts.css">
      <script id="project-template" type="text/x-handlebars-template">
-       <project class="clearfix" data-collaborator="{{collaborator}}" data-category="{{category}}">
+       <article class="clearfix" data-collaborator="{{collaborator}}" data-category="{{category}}">
          <header>
            <h1>{{name}}</h1>
     <!-- in the lab, there was a byline div. I might want something here. -->
           </header>
          <section class="project-body">{{{body}}}</section>
          <a href="#" class="read-on">Read on &rarr;</a> <!--rarr. heh.-->
-       </project>
+       </article>
      </script>
   </head>
 
@@ -94,9 +94,9 @@
     <script src="/vendor/scripts/marked.js"></script>
     <script src="/vendor/scripts/highlight.pack.js"></script>
 <!-- my own javascript files -->
-    <script src="/scripts/project.js"></script>
-    <script src="/scripts/projectList.js"></script>
-    <script src="/scripts/projectView.js"></script>
+    <script src="./scripts/project.js"></script>
+    <script src="./scripts/projectList.js"></script>
+    <script src="./scripts/projectView.js"></script>
     <script>
       projectView.initNewProjectPage();
     </script>

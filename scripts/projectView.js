@@ -3,7 +3,7 @@
 var projectView = {};
 
 projectView.populateFilters = function () {
-  $('project').each(function() {
+  $('article').each(function() {
     if(!$(this).hasClass('template')) {
       var val = $(this).find('address a').text();//not sure about this line//
       var optionTag = `<option value="${val}">${val}</option>`;
@@ -25,10 +25,10 @@ projectView.populateFilters = function () {
 projectView.handleCollaboratorFilter = function() {
   $('#collaborator-filter').on('change', function() {
     if ($(this).val()) {
-      $('project').hide();
-      $(`project[data-collatorator="${$(this).val()}"]`).fadeIn();
+      $('article').hide();
+      $(`article[data-collatorator="${$(this).val()}"]`).fadeIn();
     } else {
-      $('project').fadeIn();
+      $('article').fadeIn();
       $('template').hide();
     }
   $('#category-filter').val('');
@@ -38,10 +38,10 @@ projectView.handleCollaboratorFilter = function() {
 projectView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
-      $('project').hide();
-      $(`project[data-category="${$(this).val()}"]`).fadeIn();
+      $('article').hide();
+      $(`article[data-category="${$(this).val()}"]`).fadeIn();
     } else {
-      $('project').fadeIn();
+      $('article').fadeIn();
       $('template').hide();
     }
   $('#collaborator-filter').val('');

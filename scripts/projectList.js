@@ -2,13 +2,13 @@
 
 var rawData = [
   {
-    name: Cupcake Ipsum,
-    collaborator: B. Sweet,
+    name: Cthuvian Ipsum,
+    collaborator: Howard P.L.,
     version: 4.1,
-    webaddress: toothache.com,
+    webaddress: rlyeh.com,
     category: food,
     body:
-Cupcake ipsum dolor sit amet gingerbread gummi bears. Pie cotton candy liquorice wafer jujubes apple pie jujubes carrot cake. Jelly jelly toffee. Macaroon tart gummi bears tootsie roll tootsie roll wafer. Cheesecake tootsie roll gummies pastry gummies dessert jelly tiramisu. Chocolate bar macaroon brownie brownie pudding apple pie. Halvah sesame snaps tart powder cupcake jelly beans tootsie roll. Oat cake jelly-o cupcake bonbon chocolate chupa chups tiramisu pudding. Gummies gummies powder apple pie.,
+Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. Ooboshu ah, hai orr'e lloig ehye ph'wgah'n athg sll'ha r'luh, hupadgh llll hrii 'ai ch' Dagon. NaflShub-Niggurath Chaugnar Faugn ya hai wgah'n mg uln ronog orr'e hai ep chtenffagl shagg, ngYoggoth yaoth bugor 'ai hafh'drn 'ai vulgtm athgnyth hriiagl hai phlegeth. N'ghftor Yoggoth h'geb ep Hastur Cthulhu orr'e 'bthnk ilyaa, hupadgh lw'nafh y-nglui sll'ha shogg goka cgotha ehyeagl, kn'a Dagonagl hrii gof'nn ehye nw ehye. Uln mnahn' ctharanak ooboshu sgn'wahl f'uln shugg Yoggoth y'hah ep, li'hee orr'e wgah'nnyth y'hah chai goka llllor geb fhtagn, tharanak hupadgh tharanak hai phlegeth naflHastur h'gof'nn ilyaa.,
     publishedOn: 2/14/2001
   };
 
