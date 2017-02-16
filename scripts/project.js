@@ -2,9 +2,9 @@
 
 var Projects = [];
 
-function Project (opts) {
+function Project(opts) {
   this.name = opts.name;
-  this.collaborator = opts.collaborator
+  this.collaborator = opts.collaborator;
   this.version = opts.version;
   this.webaddress = opts.webaddress;
   this.category = opts.category;
@@ -29,5 +29,5 @@ rawData.sort(function(a,b) {
 });
 
 projects.forEach(function(a){
-  $('#projects').append(a.toHtml())
+  $('#projects').append(a.toHtml());
 });
