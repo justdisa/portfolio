@@ -15,7 +15,10 @@
     <article class="clearfix" data-collaborator="{{collaborator}}" data-category="{{category}}">
       <header>
         <h1>{{name}}</h1>
-          <!-- There's a byline div here in the labs. Will figure out what needs to go here. -->
+        <div class="byline">
+          {{publishStatus}}
+          {{cooperationWith}}
+        </div>
       </header>
       <section class="project-body">{{{body}}}</section>
       <a href="#" class="read-on">Read on &rarr;</a>
@@ -34,7 +37,7 @@
           <li class="tab" data-content="projects"><a href="#" class="icon-home"> Home</a></li>
           <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
           <li><a href="http://twitter.com/justdisa" target="_blank" class="icon-twitter3"> Twitter</a></li>
-          <li><a href="http://github.com/justdisa" target="_blank"   class="icon-github"> GitHub</a></li>
+          <li><a href="http://github.com/justdisa" target="_blank" class="icon-github"> GitHub</a></li>
         </ul>
     </nav>
     </header>
@@ -54,6 +57,9 @@
             </li>
           </ul>
         </div>
+      </section>
+      <section id="test-projects">
+
       </section>
       <section id="about" class="tab-content">
         <header>
@@ -75,10 +81,10 @@
 <!-- that old familar wall o scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script src="./vendor/scripts/marked.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
     <script src="./vendor/scripts/highlight.pack.js"></script>
-    <script src="./scripts/project.js"></script>
     <script src="./scripts/projectList.js"></script>
+    <script src="./scripts/project.js"></script>
     <script src="./scripts/projectView.js"></script>
     <script>
       projectView.initIndexPage();

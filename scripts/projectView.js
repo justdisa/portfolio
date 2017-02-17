@@ -2,10 +2,13 @@
 
 var projectView = {};
 
-projectView.populateFilters = function () {
-  $('project').each(function() {
+projectView.populateFilters = function() {
+  console.log($('article'));
+  $('article').each(function() {
+    console.log(this);
     if(!$(this).hasClass('template')) {
       var val = $(this).find('address a').text();//not sure about this line//
+      console.log(val);
       var optionTag = `<option value="${val}">${val}</option>`;
 
       if($(`#collaborator-filter option[value="${val}"]`).length === 0) {
@@ -25,10 +28,10 @@ projectView.handleCollaboratorFilter = function() {
   $('#collaborator-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
-      $(`article[data-collatorator="${$(this).val()}"]`).fadeIn();
+      $(`article[data-collaborator="${$(this).val()}"]`).fadeIn();
     } else {
       $('article').fadeIn();
-      $('template').hide();
+      $('article.template').hide();
     }
   $('#category-filter').val('');
   });
@@ -41,13 +44,13 @@ projectView.handleCategoryFilter = function() {
       $(`article[data-category="${$(this).val()}"]`).fadeIn();
     } else {
       $('article').fadeIn();
-      $('template').hide();
+      $('article.template').hide();
     }
   $('#collaborator-filter').val('');
   });
 };
 
-projectView.handleMainNav = function () {
+projectView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function(e) {
     $('.tab-content').hide();
     $('#' + $(this).data('content')).fadeIn();
@@ -57,7 +60,7 @@ projectView.handleMainNav = function () {
 };
 
 projectView.setTeasers = function() {
-  $(`.project-body' *:nth-of-type(n+2)`).hide();
+  $(`.project-body *:nth-of-type(n+2)`).hide();
   $('#projects').on('click', 'a.read-on', function() {
     e.preventDefault();
   $(this).parent().find('*').fadeIn();

@@ -1,6 +1,6 @@
 'use strict';
 
-var Projects = [];
+var projects = [];
 
 function Project(opts) {
   this.name = opts.name;
@@ -13,21 +13,27 @@ function Project(opts) {
 }
 
 Project.prototype.toHtml = function () {
-  var template = Handlebars.compile($('#project.template').text());
+  var template = Handlebars.compile($('#project-template').text());
 
-  this.daysAgo = parseInt((new Date() - new Date() - new Date(this.publishedOn))/60/60/24/1000); //date objects are so cool//
-  this.publishStatus = this.publishedOn ? `published '${this.daysAgo} days ago` : '(draft)';
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000); //date objects are so cool//
+  this.publishStatus = this.publishedOn ? `Created ${this.daysAgo} days ago` : '(draft)';
 
-//not entirely clear on this piece//
+  this.cooperationWith = this.collaborator ? `in cooperation with ${this.collaborator}.` : `.`;
+
+//not entirely clear on this piece: edit to update: we're passing the body into the marked.js library to format our markdown input//
 this.body = marked(this.body);
 
 return template(this);
 };
 
 rawData.sort(function(a,b) {
-  return (new Date (b.publishedOn)) - (new Date(a.publishedOn));
+  return(new Date (b.publishedOn)) - (new Date(a.publishedOn));
+});
+
+rawData.forEach(function(ele) {
+  projects.push(new Project(ele));
 });
 
 projects.forEach(function(a){
-  $('#projects').append(a.toHtml());
+  $('#test-projects').append(a.toHtml());
 });
