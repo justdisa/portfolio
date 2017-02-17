@@ -3,12 +3,11 @@
 var projectView = {};
 
 projectView.populateFilters = function() {
-  console.log($('article'));
+  // console.log($('article'));
   $('article').each(function() {
-    console.log(this);
+    // console.log(this);
     if(!$(this).hasClass('template')) {
-      var val = $(this).find('address a').text();//not sure about this line//
-      console.log(val);
+      var val = $(this).find('address a').text();
       var optionTag = `<option value="${val}">${val}</option>`;
 
       if($(`#collaborator-filter option[value="${val}"]`).length === 0) {
@@ -60,7 +59,7 @@ projectView.handleMainNav = function() {
 };
 
 projectView.setTeasers = function() {
-  $(`.project-body *:nth-of-type(n+2)`).hide();
+  $('.project-body *:nth-of-type(n+2)').hide();
   $('#projects').on('click', 'a.read-on', function() {
     e.preventDefault();
   $(this).parent().find('*').fadeIn();
@@ -87,7 +86,7 @@ projectView.create = function() {
     version: $("#project-version").val(),
     webaddress: $("#project-webaddress").val(),
     category: $("#project-category").val(),
-    body: $("#project-body").val(), //remember to check to see if you've left any body named description.
+    body: $("#project-body").val(),
     publishedOn: $("#project-published:checked").length ? new Date() : null
 });
 

@@ -20,7 +20,6 @@ Project.prototype.toHtml = function () {
 
   this.cooperationWith = this.collaborator ? `in cooperation with ${this.collaborator}.` : `.`;
 
-//not entirely clear on this piece: edit to update: we're passing the body into the marked.js library to format our markdown input//
 this.body = marked(this.body);
 
 return template(this);
