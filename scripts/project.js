@@ -18,7 +18,7 @@ Project.prototype.toHtml = function () {
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000); //date objects are so cool//
   this.publishStatus = this.publishedOn ? `Created ${this.daysAgo} days ago` : '(draft)';
 
-  this.cooperationWith = this.collaborator ? `in cooperation with ${this.collaborator}.` : `.`;
+  this.cooperationWith = this.collaborator ? ` in cooperation with ${this.collaborator}.` : `.`;
   this.body = marked(this.body);
   return template(this);
 };
