@@ -7,7 +7,7 @@ projectView.populateFilters = function() {
   $('article').each(function() {
     // console.log(this);
     if(!$(this).hasClass('template')) {
-      var val = $(this).find('address a').text();
+      var val = $(this).attr('data-collaborator');
       var optionTag = `<option value="${val}">${val}</option>`;
 
       if($(`#collaborator-filter option[value="${val}"]`).length === 0) {

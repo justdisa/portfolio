@@ -31,6 +31,6 @@ rawData.forEach(function(ele) {
   projects.push(new Project(ele));
 });
 
-// projects.forEach(function(a){
-//   $('#test-projects').append(a.toHtml());
-// });
+projects.forEach(function(a){
+  $('#projects').append(a.toHtml());
+});
