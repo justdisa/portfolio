@@ -19,10 +19,8 @@ Project.prototype.toHtml = function () {
   this.publishStatus = this.publishedOn ? `Created ${this.daysAgo} days ago` : '(draft)';
 
   this.cooperationWith = this.collaborator ? `in cooperation with ${this.collaborator}.` : `.`;
-
-this.body = marked(this.body);
-
-return template(this);
+  this.body = marked(this.body);
+  return template(this);
 };
 
 rawData.sort(function(a,b) {
@@ -33,6 +31,6 @@ rawData.forEach(function(ele) {
   projects.push(new Project(ele));
 });
 
-projects.forEach(function(a){
-  $('#test-projects').append(a.toHtml());
-});
+// projects.forEach(function(a){
+//   $('#test-projects').append(a.toHtml());
+// });
