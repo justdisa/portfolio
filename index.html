@@ -1,50 +1,93 @@
 <!DOCTYPE html>
 <html lang="en"> <!--added language just because-->
-  <head>
-    <meta charset="utf-8">
-    <title>disa's portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="stylesheet" href="vendor/styles/normalize.css"><!--to get rid of browser default settings-->
-    <link href="http://www.fontspace.com/aph-products/aphont" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles/base.css" />
-    <link rel="stylesheet" type="text/css" href="styles/layout.css" />
-    <link rel="stylesheet" type="text/css" href="styles/module.css" />
-    <link rel="stylesheet" type="text/css" href="styles/state.css" />
-    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
-    <link rel="stylesheet" href="styles/icons.css"><!--I reeally want to use the icomoon icons, here. I'm still figuring out how-->
-    <link rel="icon" type="image/x-icon" href="images/umbrella-and-raindrops.png">
-
-  </head>
-  <body>
-    <section class="main">
-    <section class="header">
-        <h1>Say Something Cool</h1>
-        <h2>(with a custom font)</h2>
-        <nav class="main-nav">
-          <!-- contains page title and menu, which will be hamburger menu in its default state and nav bar in desktop view. I wonder if there's a cooler looking hamburger menu icon-->
-        <div class="icon-menu"></div>
-          <ul><!--list for menu. I really really want those icons. Figuring it out.-->
-            <li class="tab" data-content="projects"><a href="#" class="icon-home"> Home</a></li>
-            <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
-            <li><a href="http://twitter.com/justdisa" target="_blank" class="icon-twitter3"> Twitter</a></li>
-            <li><a href="http://github.com/justdisa" target="_blank" class="icon-github"> GitHub</a></li>
-          </ul>
-        </nav>
+<head>
+  <meta charset="utf-8">
+  <title>disa's portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="vendor/styles/normalize.css"><!--to get rid of browser default settings-->
+  <link rel="stylesheet" type="text/css" href="styles/base.css" />
+  <link rel="stylesheet" type="text/css" href="styles/layout.css" />
+  <link rel="stylesheet" type="text/css" href="styles/module.css" />
+  <link rel="stylesheet" href="styles/icons.css"><!--I reeally want to use the icomoon icons, here. I'm still figuring out how-->
+  <link rel="icon" type="image/x-icon" href="images/umbrella-and-raindrops.png">
+  <!-- fonts -->
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+  </style>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+  </style>
+  <script id="project-template" type="text/x-handlebars-template">
+    <article class="clearfix" data-collaborator="{{collaborator}}" data-category="{{category}}">
+      <header>
+        <h2>{{name}}</h2>
+        <div class="byline">
+          {{publishStatus}}{{cooperationWith}}
+        </div>
+      </header>
+      <section class="project-body">{{{body}}}</section>
+      <a href="#" class="read-on">Read on &rarr;</a>
+    </article>
+  </script>
+</head>
+<body>
+  <header class="site-header clearfix">
+    <section class="heading-group-h1">
+      <h1>justDisa</h1>
+      <h2>What I've been up to lately: A collection of projects, fascinations, obsessions, and rabbit holes.</h2>
     </section>
-
-    <div class="project">
-      <!-- project data generated on menu selection -->
-      <p>	Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. Ehye throd ron llll, y-n'gha orr'e k'yarnak r'luh ch' shugg throd gotha naflee, sll'ha vulgtlagln grah'n ctharanak cnog Cthulhu orr'e y-fm'latgh. Hastur vulgtlagln ehye nnntharanak nog r'luh f'ch' kadishtu Yoggoth, naflkn'a ooboshu stell'bsna Nyarlathotep ep Nyarlathotep ilyaa.</p>
-
-      <p>Hai 'fhalma fm'latgh mnahn' stell'bsnanyth kadishtu orr'e ch' shagg ftaghu vulgtlagln, lw'nafh ooboshuyar s'uhn ebunma ehye ph'syha'h Shub-Niggurath y'hah orr'e, zhro shagg Yoggoth Azathoth athgagl Tsathoggua fhtagn kadishtuog Cthulhu. Chtenff nnnr'luh ph'r'luh yaog f'sgn'wahl hlirgh stell'bsna Hastur, goka Shub-Niggurath r'luh hlirgh ooboshu ilyaa, bug 'fhalma Tsathoggua n'gha stell'bsna ya. <img class="project photo" src="" alt="project photo"></p>
-    </div>
-    <section class="footer">
-      <p>copyright information</p>
-    </div>
-  </section>
-</section>
-<script src="app.js"></script>
-
-</script>
-  </body>
+    <nav class="main-nav">
+      <div class="icon-menu"></div>
+      <ul>
+          <li class="tab" data-content="projects"><a href="#" class="icon-home"> Home</a></li>
+          <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
+          <li><a href="http://twitter.com/justdisa" target="_blank" class="icon-twitter3"> Twitter</a></li>
+          <li><a href="http://github.com/justdisa" target="_blank" class="icon-github"> GitHub</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="projects" class="tab-content">
+      <div>
+        <ul id="filters">
+          <li>
+            <select id="collaborator-filter">
+              <option value="">-- Filter by Collaborator --</option>
+            </select>
+          </li>
+          <li>
+            <select id="category-filter">
+              <option value="">-- Filter by Category --</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="about" class="tab-content">
+      <header>
+          I'm Disa. Good to meet you.
+      </header>
+      <section>
+        <h2>Some of my interests:</h2>
+        <ul>
+          <li>This.</li>
+          <li>That.</li>
+          <li>The other thing.</li>
+        </ul>
+      </section>
+    </section>
+  </main>
+  <footer>
+      &copy; 2017 justDisa | Project Portfolio | Iä! Iä! Cthulhu fhtagn!
+  </footer>
+<!-- that old familar wall o scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
+  <script src="./vendor/scripts/highlight.pack.js"></script>
+  <script src="./scripts/projectList.js"></script>
+  <script src="./scripts/project.js"></script>
+  <script src="./scripts/projectView.js"></script>
+  <script>projectView.initIndexPage();</script>
+</body>
 </html>
