@@ -28,3 +28,7 @@ As a visitor, I want the primary nav to be responsive, so that I can get around 
 <<<User Stories: Stretch Goals (not required, adapt to fit your portfolio's design)
 
 As a visitor, I want to see projects one per row on mobile, so that I can read the detail easily.>>>
+
+
+
+adding a line of text here so there will be a change to commit. Troubleshooting a github issue.
