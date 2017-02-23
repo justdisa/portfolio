@@ -31,4 +31,4 @@ As a visitor, I want to see projects one per row on mobile, so that I can read t
 
 
 
-adding a line of text here so there will be a change to commit. Troubleshooting a github issue.
+Checked out class 13 branch
