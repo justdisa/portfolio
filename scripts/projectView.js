@@ -60,7 +60,8 @@ projectView.handleMainNav = function() {
 
 projectView.setTeasers = function() {
   $('.project-body *:nth-of-type(n+2)').hide();
-  $('#projects').on('click', 'a.read-on', function() {
+
+  $('#projects').on('click', 'a.read-on', function(e) {
     e.preventDefault();
   $(this).parent().find('*').fadeIn();
   $(this).hide();
