@@ -10,7 +10,7 @@
 }
 
 .icon-menu {
-  font-size: 3em;
+  font-size: 2em;
   float: right;
 }
 
@@ -82,4 +82,19 @@
     /*color: #29506D;*/
   }
 
+  .heading-group-h1 {
+    margin: .1em;
+    padding: .1em .1em .1em 2em;
+    float: none;
+  }
+
+  #filters select {
+    width: 15em;
+    margin: .2em .2em;
+  }
+
+  #filters li {
+    width: 20em;
+    display: inline;
+  }
 }
