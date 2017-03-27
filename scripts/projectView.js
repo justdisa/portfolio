@@ -2,10 +2,10 @@
 
 var projectView = {};
 
-projectView.populateFilters = function () {
-  $('project').each(function() {
+projectView.populateFilters = function() {
+  $('article').each(function() {
     if(!$(this).hasClass('template')) {
-      var val = $(this).find('address a').text();//not sure about this line//
+      var val = $(this).attr('data-collaborator');
       var optionTag = `<option value="${val}">${val}</option>`;
 
       if($(`#collaborator-filter option[value="${val}"]`).length === 0) {
@@ -15,20 +15,21 @@ projectView.populateFilters = function () {
       val = $(this).attr('data-category');
       optionTag = `<option value="${val}">${val}</option>`;
 
-      if($(`#category-filter option[value="${val}"]`).length === 0 {
+      if($(`#category-filter option[value="${val}"]`).length === 0) {
         $('#category-filter').append(optionTag);
       }
     }
   });
+};
 
 projectView.handleCollaboratorFilter = function() {
   $('#collaborator-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
-      $(`article[data-collatorator="${$(this).val()}"]`).fadeIn();
+      $(`article[data-collaborator="${$(this).val()}"]`).fadeIn();
     } else {
       $('article').fadeIn();
-      $('template').hide();
+      $('article.template').hide();
     }
   $('#category-filter').val('');
   });
@@ -41,24 +42,25 @@ projectView.handleCategoryFilter = function() {
       $(`article[data-category="${$(this).val()}"]`).fadeIn();
     } else {
       $('article').fadeIn();
-      $('template').hide();
+      $('article.template').hide();
     }
   $('#collaborator-filter').val('');
   });
 };
 
-projectView.handleMainNav = function () {
+projectView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function(e) {
     $('.tab-content').hide();
     $('#' + $(this).data('content')).fadeIn();
-  })
+  });
 
   $('.main-nav .tab:first').click();
 };
 
 projectView.setTeasers = function() {
-  $(`.project-body' *:nth-of-type(n+2)`).hide();
-  $('#projects').on('click', 'a.read-on', function() {
+  $('.project-body *:nth-of-type(n+2)').hide();
+  $('.show-less').hide(); //need this to be functional//
+  $('#projects').on('click', 'a.show-more', function(e) {
     e.preventDefault();
   $(this).parent().find('*').fadeIn();
   $(this).hide();
@@ -84,7 +86,7 @@ projectView.create = function() {
     version: $("#project-version").val(),
     webaddress: $("#project-webaddress").val(),
     category: $("#project-category").val(),
-    body: $("#project-body").val(), //remember to check to see if you've left any body named description.
+    body: $("#project-body").val(),
     publishedOn: $("#project-published:checked").length ? new Date() : null
 });
 
