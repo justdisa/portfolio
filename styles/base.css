@@ -17,6 +17,15 @@ main {
   margin:auto;
 }
 
+footer {
+  width: 85%;
+  margin: auto;
+  font-size: .75em;
+  font-style: italic;
+  text-align: right;
+  color: #777;
+}
+
 /*text styles*/
 
 p {
@@ -31,10 +40,11 @@ address {
 h1 {
   font-family: "Gloria Hallelujah";
   font-size: 3em;
+  margin-top: 0;
   }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 /*link styles*/
