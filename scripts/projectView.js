@@ -1,12 +1,12 @@
 'use strict';
 
-var projectView = {};
+const projectView = {};
 
 projectView.populateFilters = function() {
   $('article').each(function() {
     if(!$(this).hasClass('template')) {
-      var val = $(this).attr('data-collaborator');
-      var optionTag = `<option value="${val}">${val}</option>`;
+      let val = $(this).attr('data-collaborator');
+      let optionTag = `<option value="${val}">${val}</option>`;
 
       if($(`#collaborator-filter option[value="${val}"]`).length === 0) {
         $('#collaborator-filter').append(optionTag);
@@ -73,11 +73,11 @@ $('#export-field').hide();
   $('#project-json').on('focus', function(){
     this.select();
   });
-  $('#new-form').on('change', projectView.create);
+  $('#new-form').on('change', 'input, textarea', projectView.create);
 };
 
 projectView.create = function() {
-  var project;
+  let project;
   $("#project-preview").empty();
 
   project = newProject({

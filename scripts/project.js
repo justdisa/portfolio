@@ -1,7 +1,5 @@
 'use strict';
 
-var projects = [];
-
 function Project(opts) {
   this.name = opts.name;
   this.collaborator = opts.collaborator;
@@ -12,8 +10,10 @@ function Project(opts) {
   this.publishedOn = opts.publishedOn; //changed to be consistent with labs//
 }
 
+projects = [];
+
 Project.prototype.toHtml = function () {
-  var template = Handlebars.compile($('#project-template').text());
+  let template = Handlebars.compile($('#project-template').text());
 
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000); //date objects are so cool//
   this.publishStatus = this.publishedOn ? `Created ${this.daysAgo} days ago` : '(draft)';
@@ -23,14 +23,35 @@ Project.prototype.toHtml = function () {
   return template(this);
 };
 
-rawData.sort(function(a,b) {
-  return(new Date (b.publishedOn)) - (new Date(a.publishedOn));
-});
+Project.loadAll = function(rawData) {
+  rawData.sort(function(a,b) {
+    return(new Date (b.publishedOn)) - (new Date(a.publishedOn));
+  });
+  rawData.forEach(function(ele) {
+    projects.push(new Project(ele));
+  });
+}
 
-rawData.forEach(function(ele) {
-  projects.push(new Project(ele));
-});
+Project.fetchAll = function() {
+  if (localstorage.rawData) {
+    Project.loadAll(JSON.parse(localstorage.rawData));
+    projectView.initIndexPage();
+  } else {
+    $.getJSON('data/projects.json')
+    .then(function(rawData) {
+      Project.loadAll(rawData);
+      localstorage.rawData = JSON.stringify(rawData);
+      projectView.initIndexPage();
+    }, function(err) {
+      console.error(err);
+    });
+  }
+}
 
-projects.forEach(function(a){
-  $('#projects').append(a.toHtml());
-});
+
+
+
+
+// projects.forEach(function(a){
+//   $('#projects').append(a.toHtml());
+// });
