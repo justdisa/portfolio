@@ -10,7 +10,7 @@ function Project(opts) {
   this.publishedOn = opts.publishedOn; //changed to be consistent with labs//
 }
 
-projects = [];
+Project.all = [];
 
 Project.prototype.toHtml = function () {
   let template = Handlebars.compile($('#project-template').text());
@@ -28,9 +28,9 @@ Project.loadAll = function(rawData) {
     return(new Date (b.publishedOn)) - (new Date(a.publishedOn));
   });
   rawData.forEach(function(ele) {
-    projects.push(new Project(ele));
+    Project.all.push(new Project(ele));
   });
-}
+};
 
 Project.fetchAll = function() {
   if (localstorage.rawData) {
@@ -46,7 +46,7 @@ Project.fetchAll = function() {
       console.error(err);
     });
   }
-}
+};
 
 
 
