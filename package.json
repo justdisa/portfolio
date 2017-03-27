@@ -1,0 +1,17 @@
+{
+  "name": "justdisa",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Code Fellows",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.13.3",
+    "express-request-proxy": "^2.0.0",
+    "pg": "^6.1.2"
+  }
+}
