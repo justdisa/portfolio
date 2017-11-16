@@ -17,15 +17,14 @@
   max-width: 90%;
   margin: 0px;
   padding: 0px;
+  clear: right;
 }
 
 .heading-group-h2 {
-  max-width: 86%;
-  margin-left: auto;
-  margin-top: 0;
-  margin-right: auto;
-  margin-bottom: auto;
-  vertical-align: top;
+  max-width: 84%;
+  margin: auto;
+  vertical-align: bottom;
+  clear: left;
 }
 
 .main-nav {
