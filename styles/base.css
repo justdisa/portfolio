@@ -53,12 +53,13 @@ h1 {
   font-size: 5em;
   margin-top: 0;
   margin-bottom: 0;
-  padding-bottom: 0;
-  vertical-align: bottom;
+  padding-left: .2em;
   }
 
 h2 {
   font-size: 1em;
+  text-align: left;
+  padding-left: 2em;
 }
 
 /*link styles*/
