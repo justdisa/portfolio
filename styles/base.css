@@ -19,11 +19,11 @@ body {
   color: whitesmoke;
   background-color: black;
   background-image: url("../images/tobias-van-schneider-88137.jpg");
-  background-blend-mode: luminosity;
+  /*background-blend-mode: luminosity;*/
 }
 
 main {
-  width: 80%;
+  width: 95%;
   margin:auto;
 }
 

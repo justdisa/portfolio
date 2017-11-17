@@ -15,20 +15,20 @@
 
 .heading-group-h1 {
   max-width: 90%;
+  text-align: left;
   margin: 0px;
   padding: 0px;
-  clear: right;
 }
 
 .heading-group-h2 {
-  max-width: 84%;
+  max-width: 85%;
   margin: auto;
   vertical-align: bottom;
   clear: left;
 }
 
 .main-nav {
-  width: 83%;
+  width: 98%;
   margin: auto;
 }
 
