@@ -48,23 +48,16 @@ address {
 
 
 h1 {
-  font-family: "Gloria Hallelujah";
-  font-size: 5em;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: .2em;
+  /*font-family: "Gloria Hallelujah";*/
+  /*font-size: 5em;*/
+  /*margin-top: 0;*/
+  /*margin-bottom: 0;*/
+  /*padding-left: .2em;*/
   }
 
 h2 {
   font-size: 1.3em;
   text-align: left;
-}
-
-.logo {
-  Max-width: 95%;
-  margin-left: 0;
-  margin-bottom: 0;
-  display: block;
 }
 
 /*link styles*/

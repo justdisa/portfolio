@@ -59,7 +59,7 @@ projectView.handleMainNav = function() {
 };
 
 projectView.setTeasers = function() {
-  $('.project-body *:nth-of-type(n+2)').hide();
+  $('.project-body *:nth-of-type(n+3)').hide();
   $('.show-less').hide(); //need this to be functional//
   $('#projects').on('click', 'a.show-more', function(e) {
     e.preventDefault();
