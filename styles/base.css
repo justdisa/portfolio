@@ -1,5 +1,9 @@
 /*stuff for all pages*/
 
+html {
+  padding: 0;
+}
+
 body {
   line-height: 1.5;
   font-size: 1em;
@@ -7,18 +11,23 @@ body {
   color: black;
   background-color: gray;
   background-image: url("../images/barry-simon-310250.jpg");
-  background-size: auto;
+  background-size: cover;
   background-position:top;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 main {
-  width: 95%;
+  width: 100%;
   margin:auto;
 }
 
 footer {
-  width: 95%;
+  width: 100%;
   margin: auto;
   font-size: .75em;
   font-style: italic;
@@ -49,6 +58,13 @@ h1 {
 h2 {
   font-size: 1.3em;
   text-align: left;
+}
+
+.logo {
+  Max-width: 95%;
+  margin-left: 0;
+  margin-bottom: 0;
+  display: block;
 }
 
 /*link styles*/

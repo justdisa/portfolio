@@ -1,11 +1,14 @@
 /*for pieces that are not the whole site*/
 
 .site-header {
+  padding: 0;
+  margin: 0;
 }
 
 .heading-group-h1 {
-  float: left;
-  padding: 0 0 .2em 1em;
+  /*float: left;*/
+  padding: .1em 0 .2em;
+  margin: 0;
 }
 
 .icon-menu {
@@ -57,6 +60,14 @@
 
 article {
   background-image: url("../images/translucent whitesmoke.png");
+  background-size: cover;
+  padding-left: 6em;
+  padding-right: 3em;
+}
+
+article img {
+  max-width: 100%;
+  float: right;
 }
 
 #article-export label {
@@ -64,13 +75,23 @@ article {
   font-style: italic;
 }
 
+#filter-container {
+  padding-left: 6em;
+  padding-right: 3em;
+}
+
 @media only screen and (min-width: 640px) {
+  article img {
+    max-width: 30%;
+  }
+
   .icon-menu {
     display: none;
   }
 
   .main-nav {
-    padding: .2em .2em .2em 2em;
+    padding: .2em 3em .2em 6em;
+    margin: 0;
   }
 
   .main-nav ul {
@@ -86,11 +107,15 @@ article {
   }
 
   .heading-group-h1 {
-    margin: .1em;
-    padding: .1em .1em .1em 2em;
+    /*margin: .1em;*/
+    margin: 0;
+    padding: .5em .1em .5em;
     float: none;
   }
 
+  .logo {
+    max-width: 48%;
+  }
 
   #filters select {
     width: 15em;

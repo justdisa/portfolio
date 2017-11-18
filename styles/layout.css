@@ -14,22 +14,25 @@
 }
 
 .heading-group-h1 {
-  max-width: 90%;
+  width: 100%;
   text-align: left;
-  /*margin: 0px;*/
-  /*padding: 0px;*/
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/header whitesmoke stripes.png");
+  background-size: cover;
+  overflow-y: hidden;
+  /*height: 12em;*/
 }
 
 .heading-group-h2 {
-  max-width: 85%;
-  margin: auto;
-  /*vertical-align: bottom;*/
+    margin: auto;
   clear: left;
 }
 
 .main-nav {
-  width: 98%;
+  width: 100%;
   margin: auto;
+  padding-left: 6em;
 }
 
 #filters select {
