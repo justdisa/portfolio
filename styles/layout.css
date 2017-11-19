@@ -29,7 +29,7 @@
 .heading-group-h2 {
   margin: 0;
   width: 100%;
-  text-align: justify;
+  /*text-align: justify;*/
   clear: both;
   vertical-align: top;
   padding: 0;
@@ -46,5 +46,10 @@
 
 #filters select {
   width: 90%;
-  margin: .2em 5%;
+  margin: 2% 5%;
+}
+
+#resources-list ul {
+  text-align: center;
+  list-style-type: none;
 }

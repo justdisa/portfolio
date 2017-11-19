@@ -1,12 +1,10 @@
 /*for pieces that are not the whole site*/
 
 .site-header {
-  background-image: url("../images/header whitesmoke stripes.png");
-  background-size:cover;
-  background-position: center;
-  overflow-x: hidden;
   padding: 2% 5% 0 5%;
-  /*margin: 0;*/
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .logo {
@@ -15,23 +13,32 @@
 }
 
 .heading-group-h1 {
-  padding: 0;
   margin: 0;
   width: 100%;
   text-align: left;
   line-height: 1.1;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .heading-group-h2 {
+  text-align: left;
+  margin-bottom: 0;
 }
 
+#small-h2 {
+  display: inline;
+  margin-bottom: 0;
+}
+
+#big-h2 {
+  display: none;
+}
 
 .icon-menu {
   font-size: 2em;
   float: right;
   padding-right: 3%;
-  margin: 0;
+  margin-top: 0;
 }
 
 .main-nav {
@@ -88,48 +95,69 @@ article {
   text-align: justify;
   padding-left: 5%;
   padding-right: 5%;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 article img {
-  max-width: 100%;
+  width: 100%;
 }
-
-#about {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
 
 #article-export label {
   font-size: .8em;
   font-style: italic;
 }
 
-#small-h2 {
-  display: inline;
-  margin-bottom: 0;
+#about {
+  padding-left: 5%;
+  padding-right: 5%;
+  /*background-color: orange;*/
+  background-image: url("../images/translucent whitesmoke.png");
+  background-size:cover;
+  background-position: center;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
 }
-#big-h2 {
-  display: none;
+
+#resources-list {
+  width: 100%;
+  margin: auto;
 }
+
+/*ul {
+  margin-left: auto;
+  margin-right: auto;
+}*/
 
 
 /******************************************************************************/
 @media only screen and (min-width: 640px) {
+
+  .site-header {
+    background-size: cover;
+    background-position: top;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-image: url("../images/header whitesmoke stripes.png");
+  }
+
+  .heading-group-h1 {
+    margin: 0;
+  }
+
+  .logo {
+    width: 28%;
+    margin: 0 0 0 2%;
+    /*clear: left;*/
+  }
 
   #small-h2 {
     display: none;
   }
   #big-h2 {
     display: inline;
-  }
-
-  article img {
-    width: 25%;
-  }
-
-  article {
-    padding-top: 0;
   }
 
   .icon-menu {
@@ -153,21 +181,6 @@ article img {
   .main-nav ul li:hover a {
   }
 
-  .heading-group-h1 {
-    margin: 0;
-  }
-
-  .heading-group-h2 {
-    outline-color: ;
-  }
-
-
-  .logo {
-    width: 30%;
-    margin: 0 0 0 2%;
-    /*clear: left;*/
-  }
-
   #filters select {
     width: 44%;
     margin: .2em .2em;
@@ -182,6 +195,14 @@ article img {
     padding-left: 5%;
     padding-right: 5%;
     width: 100%;
+  }
+
+  article {
+    padding-top: 0;
+  }
+
+  article img {
+    width: 25%;
   }
 
   #about-text {
