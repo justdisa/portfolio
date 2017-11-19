@@ -3,7 +3,7 @@
 html {
   padding: 0;
   margin: 0;
-  background-color: gray;
+  background-color: #afbcc6;
   background-image: url("../images/barry-simon-310250.jpg");
   background-size: cover;
   background-position:top;
@@ -17,22 +17,20 @@ body {
   font-size: 1em;
   font-family: "Open Sans";
   color: black;
-  padding-left: 5%;
-  padding-right: 5%;
   margin: 0;
-  width: 100%;
+  padding: 0;
 }
 
 main {
-  width: 100%;
   margin: 0;
 }
 
 footer {
-  width: 100%;
   font-size: .75em;
   font-style: italic;
-  text-align: center;
+  text-align: right;
+  padding-left: 5%;
+  padding-right: 5%;
   color: #505a64;
 }
 
@@ -45,15 +43,6 @@ p {
 address {
   display: inline-block;
 }
-
-h1 {
-  }
-
-h2 {
-  text-align: left;
-  /*color: #29506d;*/
-}
-
 
 /*link styles*/
 
