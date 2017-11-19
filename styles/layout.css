@@ -10,7 +10,7 @@
   float: right;
   margin-left: 2%;
   margin-top: 1%;
-  margin-bottom: 1%;
+  margin-bottom: 0;
 }
 
 .clearfix::after {
@@ -30,6 +30,7 @@
   text-align: left;
   clear: both;
   vertical-align: top;
+  padding-top: 0;
 }
 
 .main-nav {
