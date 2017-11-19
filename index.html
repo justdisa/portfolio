@@ -20,7 +20,7 @@
   <script id="project-template" type="text/x-handlebars-template">
     <article class="clearfix" data-collaborator="{{collaborator}}" data-category="{{category}}">
       <header>
-        <h2>{{name}}</h2>
+        <h3>{{name}}</h3>
         <div class="byline">
           {{publishStatus}}{{cooperationWith}}
         </div>
@@ -35,11 +35,12 @@
 
   <header class="site-header clearfix">
     <section class="heading-group-h1">
-      <img src="images/justDisa.png" class="logo" alt="justDisa logo">
+      <img src="images/justDisa1.png" class="logo pull-right" alt="justDisa logo">
     </section>
-    <!-- <section class="heading-group-h2"> -->
-      <!-- <h2>A collection of projects, fascinations, obsessions, and rabbit holes.</h2> -->
-    <!-- </section> -->
+    <section class="heading-group-h2">
+      <h2 id="big-h2">A collection of projects, fascinations, obsessions, and rabbit holes, updated as the mood strikes.</h2>
+      <h2 id="small-h2">Projects, fascinations, and rabbit holes.</h2>
+    </section>
     <nav class="main-nav">
       <div class="icon-menu"></div>
       <ul>
@@ -71,30 +72,32 @@
     <section id="about" class="tab-content">
       <header>
           <h3>Who uses your website?</h3>
-
-      <section>
+      </header>
+      <div class="pull-left" id="about-text">
         <p>Everyone can picture a typical web user. A millennial, probably: under thirty and technically literate, glued to an iPhone. But the reality is very different. <a href="http://www.pewinternet.org/fact-sheet/internet-broadband/">The Pew Research Center</a> tells us that 88% of US adults are online, and this includes 64% of those over the age of sixty-five.  Those numbers are climbing. As the Baby Boom ages, they'll climb even faster.</p>
 
         <p>Further, according to a <a href="https://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html">United States Census Bureau report</a>, 19% of Americans have a disability, and half of those consider it severe. Any designer who neglects this significant minority of users will fall behind one who doesn't.</p>
 
         <p>And yet most of us are still designing with a young, able-bodied user in mind.</p>
-
+      </div>
+      <div class="pull-right" id="resources-list">
         <ul>
           <li>This.</li>
           <li>That.</li>
           <li>The other thing.</li>
         </ul>
-      </section>
-      <section>
+      </div>
+      <div class="clearfix">
 
-      </section>
-      <section>
-
-      </section>
+      </div>
     </section>
   </main>
+
   <footer>
+    <div class="footer-text">
       &copy; 2017 justDisa | Background photo by Barry Simon on Unsplash| Iä! Iä! Cthulhu fhtagn!
+    </div>
+
   </footer>
 <!-- that old familar wall o scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

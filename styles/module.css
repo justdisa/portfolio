@@ -1,28 +1,42 @@
 /*for pieces that are not the whole site*/
 
 .site-header {
-  /*padding: 0;*/
+  background-image: url("../images/header whitesmoke stripes.png");
+  background-size:cover;
+  background-position: center;
+  overflow-x: hidden;
+  padding: 2% 5% 0 5%;
   /*margin: 0;*/
 }
 
 .logo {
-  Max-width: 85%;
+  Width: 100%;
+  margin:0;
 }
 
 .heading-group-h1 {
-  /*float: left;*/
-  /*padding: .1em 6em .2em 6em;*/
-  /*margin: 0;*/
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  line-height: 1.1;
+  margin-bottom: 0;
 }
+
+.heading-group-h2 {
+}
+
 
 .icon-menu {
   font-size: 2em;
   float: right;
-  padding-right: .8em;
+  padding-right: 3%;
+  margin: 0;
 }
 
 .main-nav {
-  padding: 0.1em;
+  padding: 1%;
+  margin-top: 0;
 }
 
 .main-nav ul {
@@ -41,16 +55,17 @@
   font-size: 1.5em;
   padding: .5em .2em;
   border-bottom: 1px solid #ccc;
+  font-family: "Open Sans"
 }
 
 #filters {
   padding: 0;
   list-style: none;
-  max-width: 85%;
+  Width: 100%;
 }
 
 #filters select {
-  background-color: #c8c8c8;
+  background-color: #e2f1f8;
 }
 
 .template {
@@ -70,10 +85,18 @@
 article {
   background-image: url("../images/translucent whitesmoke.png");
   background-size: cover;
+  text-align: justify;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 article img {
   max-width: 100%;
+}
+
+#about {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 
@@ -82,14 +105,31 @@ article img {
   font-style: italic;
 }
 
+#small-h2 {
+  display: inline;
+  margin-bottom: 0;
+}
+#big-h2 {
+  display: none;
+}
+
+
+/******************************************************************************/
 @media only screen and (min-width: 640px) {
+
+  #small-h2 {
+    display: none;
+  }
+  #big-h2 {
+    display: inline;
+  }
+
   article img {
-    max-width: 25%;
+    width: 25%;
   }
 
   article {
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-top: 0;
   }
 
   .icon-menu {
@@ -97,7 +137,7 @@ article img {
   }
 
   .main-nav {
-    padding: .1% 20% 1% 20%;
+    padding: 0;
     margin: 0;
   }
 
@@ -114,18 +154,22 @@ article img {
   }
 
   .heading-group-h1 {
-    /*margin: .1em;*/
     margin: 0;
-    padding: .1% 15% 1% 15%;
-    /*float: none;*/
   }
 
+  .heading-group-h2 {
+    outline-color: ;
+  }
+
+
   .logo {
-    max-width: 50%;
+    width: 30%;
+    margin: 0 0 0 2%;
+    /*clear: left;*/
   }
 
   #filters select {
-    width: 15em;
+    width: 44%;
     margin: .2em .2em;
   }
 
@@ -135,7 +179,16 @@ article img {
   }
 
   #filter-container {
-    padding-left: 10em;
-    padding-right: 10em;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+  }
+
+  #about-text {
+    width: 60%;
+  }
+
+  #resources-list {
+    width: 30%;
   }
 }

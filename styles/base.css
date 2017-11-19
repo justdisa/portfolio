@@ -2,13 +2,6 @@
 
 html {
   padding: 0;
-}
-
-body {
-  line-height: 1.5;
-  font-size: 1em;
-  font-family: "Open Sans";
-  color: black;
   background-color: gray;
   background-image: url("../images/barry-simon-310250.jpg");
   background-size: cover;
@@ -16,6 +9,13 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   overflow-x: hidden;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 1em;
+  font-family: "Open Sans";
+  color: black;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -28,12 +28,14 @@ main {
 
 footer {
   width: 100%;
-  margin: auto;
   font-size: .75em;
   font-style: italic;
-  text-align: right;
+  text-align: center;
   color: #505a64;
   position: absolute;
+  padding-left: 5%;
+  padding-right: 10%;
+  clear: both;
 }
 
 /*text styles*/
@@ -46,19 +48,13 @@ address {
   display: inline-block;
 }
 
-
 h1 {
-  /*font-family: "Gloria Hallelujah";*/
-  /*font-size: 5em;*/
-  /*margin-top: 0;*/
-  /*margin-bottom: 0;*/
-  /*padding-left: .2em;*/
   }
 
 h2 {
-  font-size: 1.3em;
-  text-align: left;
+  /*color: #29506d;*/
 }
+
 
 /*link styles*/
 
@@ -68,7 +64,7 @@ a, a:link, a:active {
 }
 
 a:hover, a:focus {
-  color: #c8c8c8;
+  color: #e2f1f8;
 }
 
 a:visited {
