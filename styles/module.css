@@ -176,8 +176,8 @@ article img {
   }
 
   #filters select {
-    width: 44%;
-    margin: .2em .2em;
+    width: 20%;
+    margin: 0 1.5% 0 0;
   }
 
   #filters li {
@@ -186,9 +186,9 @@ article img {
   }
 
   #filter-container {
+    width: 100%;
     padding-left: 5%;
-    padding-right: 5%;
-    /*width: 100%;*/
+    /*padding-right: 5%;*/
   }
 
   article {
